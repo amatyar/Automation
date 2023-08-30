@@ -21,11 +21,11 @@ public class yahooMail {
 				// Maximize the window.
 				driver.manage().window().maximize();
 				// Enter UserName
-				driver.findElement(By.id("login-username")).sendKeys("amatyar@yahoo.com");
+				driver.findElement(By.id("login-username")).sendKeys("amatyarabin@yahoo.com");
 				// Click on ‘Next’ button
 				driver.findElement(By.id("login-signin")).click();
 				// Enter Password
-				driver.findElement(By.id("login-passwd")).sendKeys("March2006");
+				driver.findElement(By.id("login-passwd")).sendKeys("apple5653");
 				// Wait For Page To Load
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Click on ‘Sign In’ button
