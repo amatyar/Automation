@@ -19,14 +19,27 @@ public class August28 {
 		String a = head.getText();
 		System.out.println(a);
 //using class
-		WebElement head1 = dr.findElement(By.cssSelector(".section_header"));
+		WebElement head1 = dr.findElement(By.cssSelector(".section_header"));//??
 		String b = head1.getText();
 		System.out.println(b);
 		// id 
-		WebElement head11 = dr.findElement(By.cssSelector(""));
-		String c = head11.getText();
+		//WebElement head11 = dr.findElement(By.cssSelector("#contact_form"));//??
+		WebElement head11 = dr.findElement(By.xpath("//*[@id=\"contact_me\"]/div/div[1]/div/h2"));
+		boolean c = head11.isDisplayed();
 		System.out.println(c);
-		
+		// anyAttribute 
+		  //tagName[attribute= "value"] 
+		   
+		  // Test 3 
+		  WebElement headThreeD = dr.findElement(By.cssSelector("h2[name=\"contactme\"]")); 
+		  String q3 = headThreeD.getText(); 
+		  System.out.println(q3); 
+		  if(q3.equals("CONTACT US")) { 
+		   System.out.println("Testcase 1 pass"); 
+		  } 
+		  else { 
+		   System.out.println("Testcase Fail"); 
+		  } 
 	}
 
 }

@@ -56,10 +56,10 @@ public class TestCases {
 		
 		boolean q5 = dr.findElement(By.cssSelector("body")).isDisplayed(); //??
 		  if(q5){ 
-		   System.out.println("Testcase 3 pass"); 
+		   System.out.println("Testcase 3 Passed"); 
 		  } 
 		  else { 
-		   System.out.println("Testcase 3 fail"); 
+		   System.out.println("Testcase 3 Failed"); 
 		  } 
 		  
 		  
@@ -69,9 +69,9 @@ public class TestCases {
 			dr.findElement(By.cssSelector("#contact_form > input:nth-child(2) ")).sendKeys("Amatya");
 			dr.findElement(By.cssSelector(" #contact_form > input:nth-child(3)")).sendKeys("amatyar@yahoo.com");
 			dr.findElement(By.cssSelector(" #contact_form > textarea")).sendKeys("Hello i am Rabindra from Boston.");
-			dr.findElement(By.cssSelector("#form_buttons > input:nth-child(2)")).click();
-			String abc = dr.findElement(By.cssSelector("#form_buttons > input:nth-child(1)")).getText();
-			//System.out.println(abc);
+			dr.findElement(By.cssSelector("#form_buttons > input:nth-child(1)")).click();
+			String abc = dr.findElement(By.cssSelector("#contact_form > input:nth-child(1)")).getText();// put any field
+			System.out.println(abc);
 			if(abc.isEmpty()) {
 				System.out.println("Test Case 4 passed");
 			}
@@ -80,7 +80,7 @@ public class TestCases {
 				System.out.println("Test case 4 failed");
 			}
 			
-			
+			//#form_buttons > input:nth-child(1)
 	}
 
 }
