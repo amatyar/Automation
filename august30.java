@@ -15,16 +15,9 @@ public class august30 {
          WebDriver dr = new ChromeDriver();
      	dr.get("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
      	
-       
         // getTitle() to obtain page title
         System.out.println("Page title is : " + dr.getTitle());
 				
-				
-		
-			
-				// driver.findElements()
-	
-     	
 		
 		WebElement head = dr.findElement(By.cssSelector("h2"));
 		//getText()
@@ -110,20 +103,19 @@ public class august30 {
 		      WebElement l= dr.findElement(By.cssSelector("body"));
 		      String p = l.getText();
 		      System.out.println("Page Source is : " + p);
+		      //For new condition
 		      
-//		      dr.get("http://www.webdriveruniversity.com/Contact-Us/contactus.html"); 
-//		    	  String pagesource=dr.getPageSource(); 
-//		    	  System.out.println(pagesource + "Page Source"); 
 		      dr.get("http://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html"); 
-		    	  //to find elements 
+		    	  //To find elements 
 		    	  List<WebElement> links=dr.findElements(By.xpath("//input[@type='radio']")); 
 		    	  //Counting no of links in result page 
 		    	  System.out.println(links.size()+" elements"); 
 		    	  for (int i=0; i<links.size();i++){
 		    	      System.out.println("Radio button text:" + links.get(i).getAttribute("value"));
 		    	    }
-			
+			// to close page
 			dr.close();
+			// to close application
 			dr.quit();
 	}
 
