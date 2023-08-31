@@ -16,11 +16,13 @@ public class august30 {
      	dr.get("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
      	
         // getTitle() to obtain page title
+     	System.out.println("------getTitle()------");
         System.out.println("Page title is : " + dr.getTitle());
 				
 		
 		WebElement head = dr.findElement(By.cssSelector("h2"));
 		//getText()
+		System.out.println("------getText()------");
 		String q = head.getText();
 		if(q.equals("CONTACT US"))
 		{
@@ -33,14 +35,15 @@ public class august30 {
 		
 		//getSize
 		//to maximize the window to get actual size
+		System.out.println("------getSize------");
 		dr.manage().window().maximize(); 
 		Dimension D1 = head.getSize();
 		System.out.println(D1);	
 		
-		// test case 2
+	
 		//Arrange
 		//Action
-		//dr.get("http://www.webdriveruniversity.com/Contact-Us/contactus.html");
+		
 		dr.findElement(By.cssSelector(" #contact_form > input:nth-child(1)")).sendKeys("Rabindra ");
 		dr.findElement(By.cssSelector("#contact_form > input:nth-child(2) ")).sendKeys("Amatya");
 		dr.findElement(By.cssSelector(" #contact_form > input:nth-child(3)")).sendKeys("amatyar@yahoo.com");
@@ -92,14 +95,17 @@ public class august30 {
 			}
 			
 			// driver.navigate()
+			System.out.println("------navigate()------");
 			dr.navigate().refresh();
 			
 			// driver.getCurrentUrl()
+			System.out.println("------getCurrentUrl()------");
 			String url ="http://www.webdriveruniversity.com/Contact-Us/contactus.html";
 			System.out.println("Current URL is:" + url);
 			
 			
 			//get page source with getText method
+			System.out.println("------page source with getText method------");
 		      WebElement l= dr.findElement(By.cssSelector("body"));
 		      String p = l.getText();
 		      System.out.println("Page Source is : " + p);
@@ -107,14 +113,18 @@ public class august30 {
 		      
 		      dr.get("http://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html"); 
 		    	  //To find elements 
+		      System.out.println("------To find elements ------");
 		    	  List<WebElement> links=dr.findElements(By.xpath("//input[@type='radio']")); 
 		    	  //Counting no of links in result page 
 		    	  System.out.println(links.size()+" elements"); 
 		    	  for (int i=0; i<links.size();i++){
 		    	      System.out.println("Radio button text:" + links.get(i).getAttribute("value"));
 		    	    }
+		    	  System.out.println("------to close page ------");
 			// to close page
 			dr.close();
+			
+			System.out.println("------to quit(); ------");
 			// to close application
 			dr.quit();
 	}
