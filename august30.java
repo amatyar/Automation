@@ -1,7 +1,6 @@
 package Automation;
 
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
@@ -18,6 +17,7 @@ public class august30 {
         // getTitle() to obtain page title
      	System.out.println("------getTitle()------");
         System.out.println("Page title is : " + dr.getTitle());
+        String expectedTitle ="WebDriver | Contact Us";
 				
 		
 		WebElement head = dr.findElement(By.cssSelector("h2"));
@@ -96,7 +96,7 @@ public class august30 {
 			
 			// driver.navigate()
 			System.out.println("------navigate()------");
-			dr.navigate().refresh();
+			dr.navigate().refresh();// back()
 			
 			// driver.getCurrentUrl()
 			System.out.println("------getCurrentUrl()------");
