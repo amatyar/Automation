@@ -36,8 +36,9 @@ public class Lambda {
 			//Assert.assertEquals(actualTitle, title, "Page title does not match");
 			
 			System.out.println("User logged in successfully");
-			dr.close();
-			dr.quit();
+			
+			//dr.close();
+			//dr.quit();
 		} 
 		catch (Exception e) 
 		{
@@ -48,6 +49,7 @@ public class Lambda {
 		finally
 		{
 			System.out.println("Closing connection");
+			
 		}
 
 	}

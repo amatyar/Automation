@@ -106,8 +106,8 @@ public class august30 {
 			
 			//get page source with getText method
 			System.out.println("------page source with getText method------");
-		      WebElement l= dr.findElement(By.cssSelector("body"));
-		      String p = l.getText();
+		      WebElement pageSource= dr.findElement(By.cssSelector("body"));
+		      String p = pageSource.getText();
 		      System.out.println("Page Source is : " + p);
 		      //For new condition
 		      

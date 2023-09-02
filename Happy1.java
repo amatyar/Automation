@@ -16,9 +16,9 @@ public class Happy1 {
         d.get("http://www.saucedemo.com/");
         d.manage().window().maximize();
 		List<LoginData> data = new ArrayList<LoginData>();
-	        data.add(new LoginData("standard_user","secret_sauce"));
+	        //data.add(new LoginData("standard_user","secret_sauce"));
 	        data.add(new LoginData("locked_out_user","secret_sauce"));
-	        data.add(new LoginData("problem_user", "secret_sauce"));
+	        //data.add(new LoginData("problem_user", "secret_sauce"));
 	        data.add(new LoginData("performance_glitch_user", "secret_sauce"));
 	        
 

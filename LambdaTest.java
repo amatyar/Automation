@@ -41,8 +41,8 @@ public class LambdaTest {
         WebElement b = driver.findElement(By.id("#password"));
         WebElement c = driver.findElement(By.id("#passwordNext"));
         
-        a.sendKeys("Rabindra.amatya@gmail.com");         
-        b.sendKeys("Rohanamatya07");     
+        a.sendKeys("abch@gmail.com");         
+        b.sendKeys("lappy");     
             
         c.click();
         //WebElement heading = driver.findElement(By.cssSelector("#passwordNext"));

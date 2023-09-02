@@ -11,7 +11,7 @@ public class August25 {
 
 	public static void main(String[] args) 
 	{ 
-		//HashMap ---> System.setProperty(Key, Value)
+		// System.setProperty(Key, Value)
 		//set the system property indicated by specified key
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver\\chromedriver.exe");
 		//what is use for? setting the properties for the browser for creating test cases, it is method

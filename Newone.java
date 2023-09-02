@@ -32,7 +32,7 @@ public class Newone {
 	                WebElement passwordField = driver.findElement(By.cssSelector("#password"));
 
 	                
-	                usernameField.sendKeys("problem_user");
+	                usernameField.sendKeys("standard_user");
 	                passwordField.sendKeys("secret_sauce");
 
 	              

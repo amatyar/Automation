@@ -82,23 +82,25 @@ public class August31 {
          Login2.click();
          List <WebElement > items = dr.findElements(By.cssSelector(".inventory_item_name"));
  		boolean productFound = false;
- 		//for(int i = 0 ; i < items.size() ; i++) {
- 			//System.out.println(items.get(i).getText());
-// 			if(items.get(i).getText().equals(Expected_Product)) {
-// 				productFound = true;
-// 				break;
-// 			}
-// 		}	
-// 		if(productFound) {
-// 			System.out.println("product available");
-// 			System.out.println("Test case 4 pass");
-// 		}
-// 		else {
-// 			System.out.println("product not available");
-// 			System.out.println("Test case 4 fail");
-// 		}
+ 		for(int i = 0 ; i < items.size() ; i++) {
+ 			System.out.println(items.get(i).getText());
+ 			if(items.get(i).getText().equals(Expected_Product)) {
+ 				productFound = true;
+ 				break;
+ 			}
+ 		}	
+ 		if(productFound) {
+ 			System.out.println("product available");
+ 			System.out.println("Test case 4 pass");
+ 		}
+ 		else {
+ 			System.out.println("product not available");
+ 			System.out.println("Test case 4 fail");
+ 		}
+ 			
  		 System.out.println(items.size()+" elements"); 
-   	  for (int i=0; i<items.size();i++){
+   	  for (int i=0; i<items.size();i++)
+   	  {
    	      System.out.println("Items in productlist " + items.get(i).getText());
    	    }
    	  System.out.println("------to close page ------");
