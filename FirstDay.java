@@ -1,4 +1,6 @@
 package Automation;
+import java.util.List;
+
 //Ctrl + Shift + o
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,6 +26,7 @@ public class FirstDay {
 		//Assertion
 	
 		WebElement heading = dr.findElement(By.cssSelector("#header_container > div.header_secondary_container > span "));
+		
 		if(heading.isDisplayed()) {
 			System.out.println("Test case passed.");
 		}
@@ -33,6 +36,9 @@ public class FirstDay {
 		}
 		// Closing 
 		//dr.close();
+		List<WebElement> eleList = dr.findElements(By.className("input_error"));
+	//  // [ele,ele,ele,ele,ele]
+	 eleList.get(1).sendKeys("secret_sauce");
 	}
 
 }

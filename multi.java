@@ -43,7 +43,7 @@ public static void MultipleUsers(ArrayList<ArrayList<String>> users)
 		    {
 		        String username = user.get(0);
 		        String password = user.get(1);
-		        driver.get("http://www.saucedemo.com/");
+		        driver.get("http://www.saucedemo.1com/");
 		        driver.findElement(By.cssSelector("#user-name")).sendKeys(username);
 		        driver.findElement(By.cssSelector("#password")).sendKeys(password);
 		        driver.findElement(By.cssSelector("#login-button")).click();

@@ -6,11 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class pra {
+public class MethodUsed {
 
 	public static void main(String[] args) {
 	
-		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rabindra\\Downloads\\chromedriver\\chromedriver.exe");	       
+		 System.setProperty("webdriver.chrome.driver", "C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver\\chromedriver.exe");	       
          WebDriver dr = new ChromeDriver();
          String url = "http://www.saucedemo.com/";
          dr.get(url);
@@ -33,7 +33,9 @@ public class pra {
 		        dr.get(url);	      
 
 		        CreateLogin(dr, "standard_user", "secret_sauce");
+		        //title from main page
 		        boolean abc = dr.findElement(By.cssSelector("#header_container > div.header_secondary_container > span")).isDisplayed();
+		
 		        if (abc) 
 		        {
 		            System.out.println("Perform Case 1 passed.");
