@@ -38,7 +38,7 @@ public class DropdownLists {
          boolean sb= sbIndex.isSelected();
          if(sb)
          {
-        	 System.out.println("Select by index case is passed.");
+        	 System.out.println("\nSelect by index case is passed.\n");
          }
          else
          {
@@ -46,7 +46,7 @@ public class DropdownLists {
          }
          
          //Selecting  -- selectByVisibleText
-         System.out.println("Select the choice by Text Java");
+         System.out.println("Test case selectByVisibleText");
          select.selectByVisibleText("JAVA");         
          WebElement sr = driver.findElement(By.cssSelector("#dropdowm-menu-1 > option:nth-child(1)"));
          boolean e= sr.isSelected();

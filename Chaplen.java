@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class GereddyBro {
+public class Chaplen {
 
 	public static void main(String[] args) {		
 		//setProperty() method to define the path for the driver before writing test cases,this method takes parameters key and value 
@@ -17,6 +17,7 @@ public class GereddyBro {
 		dr.get("https://en.wikipedia.org/wiki/Selenium_(software)#Selenium_Webdriver");
 		
 		dr.findElement(By.linkText("Create account")).click();
+		
 		String url1 = dr.getCurrentUrl();
 		if(url1.contains("wikipedia.org")) {
 			System.out.println("1st verification: "+"it is an internal Link -Passed");
