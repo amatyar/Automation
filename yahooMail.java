@@ -25,7 +25,7 @@ public class yahooMail {
 				// Click on ‘Next’ button
 				driver.findElement(By.id("login-signin")).click();
 				// Enter Password
-				driver.findElement(By.id("login-passwd")).sendKeys("Abcd");
+				driver.findElement(By.id("login-passwd")).sendKeys("Att");
 				// Wait For Page To Load
 				driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 				// Click on ‘Sign In’ button
