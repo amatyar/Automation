@@ -14,7 +14,8 @@ public class Sept12 {
 		WebDriver driver = new ChromeDriver(); 
 		
 		driver.get("http://www.webdriveruniversity.com");
-		
+		 driver.navigate().refresh();
+		  driver.manage().window().maximize();
 		String parent = driver.getWindowHandle();
 		System.out.println(parent);
 		
