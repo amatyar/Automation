@@ -35,11 +35,11 @@ public class textFileLogin {
 				dr.findElement(By.id("login-signin")).click();
 				String url= dr.getCurrentUrl();
 				if (url.equals("https://mail.yahoo.com/d/folders/1")) {
-					System.out.println(iteration + " Admin Login is Successful – Passed");
+					System.out.println(iteration + "Login is Successful – Passed");
 					}
 					else 
 					{
-					System.out.println(iteration+" Admin Login is Unsuccessful – Failed");
+					System.out.println(iteration+"Login is Unsuccessful – Failed");
 					}
 					dr.close();
 					}

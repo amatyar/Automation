@@ -4,6 +4,7 @@ import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Sept12 {
@@ -13,34 +14,34 @@ public class Sept12 {
 				"C:\\Users\\Rabindra\\OneDrive\\Desktop\\chromedriver\\chromedriver.exe");		
 		WebDriver driver = new ChromeDriver(); 
 		
-		driver.get("http://www.webdriveruniversity.com");
-		 driver.navigate().refresh();
+		 driver.get("http://www.webdriveruniversity.com/"); 
 		  driver.manage().window().maximize();
-		String parent = driver.getWindowHandle();
-		System.out.println(parent);
-		
-		System.out.println(driver.getCurrentUrl());
-		
-		driver.findElement(By.cssSelector("#contact-us > div > div.section-title > h1")).click();
-		Set<String> windows =	driver.getWindowHandles();
-		for(String window:windows) {
-			System.out.println(window);
-			
-			if(!window.equals(parent)) {
-				driver.switchTo().window(window);
-				break;
-			}
-		}
-		
-		System.out.println(driver.getCurrentUrl());
-		
-		  driver.findElement(By.cssSelector("#contact_form > input:nth-child(1)")).sendKeys("Rabindra"); 
-		  driver.findElement(By.cssSelector("#contact_form > input:nth-child(2)")).sendKeys("Amatya"); 
-		  driver.findElement(By.cssSelector("#contact_form > input:nth-child(3)")).sendKeys("rabindra.amatya@gmail.com");
-		  driver.findElement(By.cssSelector("#contact_form > textarea")).sendKeys("we are learning selenium.");
-		  driver.findElement(By.cssSelector("#form_buttons > input:nth-child(2)")).submit();
+		  String parentWindow = driver.getWindowHandle(); 
+		  System.out.println(parentWindow); 
+		  driver.findElement(By.cssSelector("#contact-us")).click(); 
+		   
+		  Set <String> windows = driver.getWindowHandles(); 
+		  for(String window:windows) { 
+		   if(! window.equals(parentWindow)) { 
+		    driver.switchTo().window(window); 
+		    break; 
+		   } 
+		  } 
+		   
+		  System.out.println(driver.getCurrentUrl()); 
+		  WebElement first_name = driver.findElement(By.cssSelector("#contact_form > input:nth-child(1)")); 
+		  WebElement last_name = driver.findElement(By.cssSelector("#contact_form > input:nth-child(2)")); 
+		  WebElement email_address = driver.findElement(By.cssSelector("#contact_form > input:nth-child(3)")); 
+		  WebElement message = driver.findElement(By.cssSelector("#contact_form > textarea")); 
+		  WebElement submit_button =driver.findElement(By.cssSelector("#form_buttons > input:nth-child(2)")); 
+		   
+		  first_name.sendKeys("Rabindra "); 
+		  last_name.sendKeys("Amatya"); 
+		  email_address.sendKeys("Rabindra.amatya@gmail.com"); 
+		  message.sendKeys("Java then selenium , is not it?"); 
+		  submit_button.click();   
 		  
-		  driver.switchTo().window(parent);
+		  driver.switchTo().window(parentWindow);
 		  System.out.println(driver.getCurrentUrl());
 				   
 

@@ -20,6 +20,7 @@ public class multipleHandling {
         // open multiple tabs
 
         driver.get("http://www.saucedemo.com/");// tab 1
+        
         String parent = driver.getWindowHandle();
        	System.out.println("Sauce tab : "+ parent);//
         driver.findElement(By.cssSelector("#user-name")).sendKeys("standard_user");
